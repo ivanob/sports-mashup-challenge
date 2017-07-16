@@ -1,0 +1,23 @@
+{
+  "name": "sports-mashup-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "mashup": "./index.js"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "sports",
+    "mashup",
+    "code",
+    "challenge"
+  ],
+  "author": "Ivan Obeso",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.11.0"
+  }
+}
