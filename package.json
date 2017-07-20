@@ -18,6 +18,8 @@
   "author": "Ivan Obeso",
   "license": "ISC",
   "dependencies": {
-    "commander": "^2.11.0"
+    "axios": "^0.16.2",
+    "commander": "^2.11.0",
+    "config": "^1.26.1"
   }
 }

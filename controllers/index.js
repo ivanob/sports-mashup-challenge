@@ -1,6 +1,7 @@
+var githubContr = require('./github.controller')
+
 module.exports = {
-  print: (params) => {
-    console.log(params)
-    //reply(TaskService.getTaskPerform(encodeURIComponent(request.params.id)))
+  search: (word) => {
+    githubContr.searchProjects(word)
   }
 }
