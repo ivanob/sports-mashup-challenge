@@ -3,10 +3,11 @@ var config = require('config');
 var Twitter = require('twitter-node-client').Twitter;
 
 var error = function (err, response, body) {
-  console.log('ERROR [%s]', err);
+  console.log('Error [%s]', err);
 };
 var success = function (data) {
-  console.log('Data [%s]', data);
+  var dataObj = JSON.parse(data)
+  console.log('Project Name: ', dataObj['search_metadata']['query'], "\n");
 };
 
 var config = {
@@ -19,8 +20,8 @@ var config = {
 
 var twitter = new Twitter(config);
 
-const getTweetsRelated = keyword => {
-  return twitter.getSearch({'q':'#haiku','count': 10}, error, success);
+const getTweetsRelated = projectName => {
+  return twitter.getSearch({'q':projectName,'count': 10}, error, success);
 }
 
 module.exports = {
