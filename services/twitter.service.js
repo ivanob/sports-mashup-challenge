@@ -7,7 +7,13 @@ var error = function (err, response, body) {
 };
 var success = function (data) {
   var dataObj = JSON.parse(data)
-  console.log('Project Name: ', dataObj['search_metadata']['query'], "\n");
+  console.log('Project Name: ', decodeURIComponent(dataObj['search_metadata']['query']), '\n');
+  console.log('Recent tweets published about this project:');
+  dataObj['statuses'].map(tweet => {
+    console.log(' -', tweet['user']['name'], ': ', tweet['text'])
+    console.log('[Published on', tweet['created_at'], ']\n')
+  })
+  console.log('--------------------------------------------------\n')
 };
 
 var config = {

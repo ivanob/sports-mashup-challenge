@@ -6,6 +6,5 @@ module.exports = {
     githubContr.searchProjects(word).then(response => {
       response.map(project => twitterContr.findTweetsRelated(project))
     })
-    //twitterContr.findTweetsRelated('aaa')
   }
 }
