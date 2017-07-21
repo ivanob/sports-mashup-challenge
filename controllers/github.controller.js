@@ -9,8 +9,7 @@ module.exports = {
           resolve(response.data.items.map(x=>x.full_name).slice(0,config.github.limitprojects))
         })
         .catch(error => {
-          //reject('ERROR')
-          //showError(commit, error)
+          Boom.serverUnavailable('Error [' + error + ']')
         })
     })
   }

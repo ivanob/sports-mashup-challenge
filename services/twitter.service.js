@@ -1,9 +1,10 @@
 var axios = require('axios');
 var config = require('config');
+var Boom = require('boom');
 var Twitter = require('twitter-node-client').Twitter;
 
 var error = function (err, response, body) {
-  console.log('Error [%s]', err);
+  Boom.serverUnavailable('Error [' + err + ']')
 };
 var success = function (data) {
   var dataObj = JSON.parse(data)
