@@ -5,10 +5,14 @@
 npm install
 node index.js index -k KEYWORD_TO_SEARCH
 ```
+### Example of execution
+```
+node index.js index -k football
+```
 
 ### Configuration
-# You need to create a folder 'config' with the file 'default.toml' inside in the root directory of the project.
-# This content of this file would be the following:
+You need to create a folder 'config' with the file 'default.toml' inside in the root directory of the project.
+The content of this file would be the following:
 ```
 [github]
 oauthtoken='...'
